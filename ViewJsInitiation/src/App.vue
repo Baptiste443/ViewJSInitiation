@@ -1,11 +1,17 @@
-<script setup></script>
-
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <h1>{{ firstName }}</h1>
+  <form action="" @submit.prevent="ChangeName">
+    <input type="text" placeholder="Name" v-model="nvNAme">
+    <button > Changer</button>
+  </form>
+
 </template>
 
-<style scoped></style>
+<script setup>
+  const firstName ="Jonh"
+  const nvNAme ="8"
+
+  const ChangeName= () => {
+    firstName=nvNAme
+  }
+</script>
