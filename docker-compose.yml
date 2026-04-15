@@ -1,0 +1,16 @@
+services:
+  vite-dev:
+    build:
+      context: ./ViewJsInitiation
+      dockerfile: Dockerfile
+    container_name: viewjs_dev
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./ViewJsInitiation:/app          # fichiers source montés depuis le host
+      - /app/node_modules                # node_modules du conteneur isolés
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+    stdin_open: true
+    tty: true
