@@ -1,1 +1,1 @@
-Apprentissage des bases du Framework ViewJS sous formes de petits exercices
+Apprentissage des bases du Framework ViewJS sous forme de petits exercices
