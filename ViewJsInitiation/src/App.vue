@@ -1,17 +1,20 @@
 <template>
-  <h1>{{ firstName }}</h1>
-  <form action="" @submit.prevent="ChangeName">
-    <input type="text" placeholder="Name" v-model="nvNAme">
-    <button > Changer</button>
-  </form>
-
+  <div>
+    <h1>{{ firstName }}</h1>
+    <form @submit.prevent="changeName">
+      <input type="text" placeholder="Name" v-model="nvName">
+      <button type="submit">Changer</button>
+    </form>
+  </div>
 </template>
 
 <script setup>
-  const firstName ="Jonh"
-  const nvNAme ="8"
+import { ref } from 'vue'
 
-  const ChangeName= () => {
-    firstName=nvNAme
-  }
+const firstName = ref('John')
+const nvName = ref('')
+
+const changeName = () => {
+  firstName.value = nvName.value
+}
 </script>
